@@ -1,0 +1,92 @@
+{
+  "name": "ollamallmbasev339e68d-6cd987669-xjzvl",
+  "namespace": "ollamallmbasev339e68d-shared",
+  "labels": {
+    "applications.app.bytetrade.io/name": "ollamallmbasev339e68d",
+    "applications.app.bytetrade.io/owner": "REDACTED_OWNER",
+    "applications.app.bytetrade.io/raw-app-name": "ollamallmbasev3",
+    "hami.io/vgpu-node": "olares",
+    "io.bytetrade.app": "true",
+    "io.kompose.network/chrome-default": "true",
+    "io.kompose.service": "ollama",
+    "linkerd.io/control-plane-ns": "os-mesh",
+    "linkerd.io/proxy-deployment": "ollamallmbasev339e68d",
+    "linkerd.io/workload-ns": "ollamallmbasev339e68d-shared",
+    "pod-template-hash": "6cd987669"
+  },
+  "ownerReferences": [
+    {
+      "apiVersion": "apps/v1",
+      "blockOwnerDeletion": true,
+      "controller": true,
+      "kind": "ReplicaSet",
+      "name": "ollamallmbasev339e68d-6cd987669",
+      "uid": "8ab2817b-8881-403a-bea0-20e1f5cc296b"
+    }
+  ],
+  "schedulerName": "hami-scheduler",
+  "runtimeClassName": "nvidia",
+  "hami": {
+    "hami.io/bind-phase": "success",
+    "hami.io/bind-time": "1792856573",
+    "hami.io/vgpu-devices-allocated": ";GPU-REDACTED,NVIDIA,4352,0,1:;;",
+    "hami.io/vgpu-devices-to-allocate": ";;;;",
+    "hami.io/vgpu-node": "olares",
+    "hami.io/vgpu-time": "1792856573"
+  },
+  "containers": [
+    {
+      "name": "ollama",
+      "image": "docker.io/ollama/ollama:0.40.2",
+      "resources": {
+        "limits": {
+          "cpu": "6",
+          "memory": "4Gi",
+          "nvidia.com/gpu": "1"
+        },
+        "requests": {
+          "cpu": "200m",
+          "memory": "4Gi",
+          "nvidia.com/gpu": "1"
+        }
+      },
+      "env": [
+        {
+          "name": "OLLAMA_PRELOAD",
+          "value": "true"
+        },
+        {
+          "name": "OLLAMA_HOST",
+          "value": "0.0.0.0:11434"
+        },
+        {
+          "name": "OLLAMA_NOPRUNE",
+          "value": "1"
+        },
+        {
+          "name": "OLLAMA_ORIGINS",
+          "value": "*"
+        },
+        {
+          "name": "GGML_CUDA_DISABLE_GRAPHS",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "containerStatus": [
+    {
+      "name": "ollama",
+      "image": "docker.io/ollama/ollama:0.40.2",
+      "imageID": "docker.io/ollama/ollama@sha256:b86366bb528bbf7f1424435d165028497a5b69bf6ddb4fa5a87102e2b79f44fb",
+      "ready": true,
+      "restartCount": 0,
+      "state": {
+        "running": {
+          "startedAt": "2026-10-24T15:43:23Z"
+        }
+      },
+      "lastState": {}
+    }
+  ]
+}

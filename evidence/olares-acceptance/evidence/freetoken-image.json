@@ -1,0 +1,19 @@
+{
+  "name": "0.1.3-cu132",
+  "full_size": 7293483629,
+  "images": [
+    {
+      "architecture": "amd64",
+      "features": "",
+      "variant": null,
+      "digest": "sha256:b3f8c48f4bcf14ff90ca122a38b3f2577e39180d14a0db4168d778b4ede2605e",
+      "os": "linux",
+      "os_features": "",
+      "os_version": null,
+      "size": 7293483629,
+      "status": "active",
+      "last_pulled": "2026-10-23T20:34:48.681222391Z",
+      "last_pushed": "2026-09-20T13:25:17.835039329Z"
+    }
+  ]
+}

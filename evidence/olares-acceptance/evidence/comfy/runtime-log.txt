@@ -1,0 +1,50 @@
+== CUDA ==
+CUDA Version 13.1.1
+comfyui.logs.launch_cli_args {"args":"--disable-xformers --disable-smart-memory --disable-cuda-malloc --disable-dynamic-vram --front-end-version Comfy-Org/ComfyUI_frontend@v1.58.0"}
+[ComfyUI] [INFO] ComfyUI CLI_ARGS from environment: --disable-xformers --disable-smart-memory --disable-cuda-malloc --disable-dynamic-vram --front-end-version Comfy-Org/ComfyUI_frontend@v1.58.0
+** Python version:
+[ComfyUI-Error] [1m[31m[ERROR][0m [ComfyUI-Manager] PyTorch is not installed
+[ComfyUI-Error] error: externally-managed-environment
+[ComfyUI-Error] [1m[33m[WARNING][0m WARNING: You need pytorch with cu130 or higher to use optimized CUDA operations.
+If you are on nvidia 20 series and above it is required that you update your pytorch to cu130 or higher.
+[32m[INFO][0m Found comfy_kitchen backend cuda: {'available': True, 'disabled': True, 'unavailable_reason': None, 'capabilities': ['adaln', 'apply_rope', 'apply_rope1', 'apply_rope1_', 'apply_rope_', 'apply_rope_split_half', 'apply_rope_split_half1', 'apply_rope_split_half1_', 'apply_rope_split_half_', 'closest_point_on_mesh', 'connected_components', 'convrot_w4a4_linear', 'delaunay3d', 'dequantize_convrot_w4a4_weight', 'dequantize_int8_convrot_weight', 'dequantize_int8_convrot_weight_dtype', 'dequantize_int8_simple', 'dequantize_int8_simple_dtype', 'dequantize_nvfp4', 'dequantize_per_tensor_fp8', 'dequantize_w4a8_int8_weight', 'edge_collapse_checks', 'fp16_conv3d', 'fp16_conv3d_out', 'fp16_linear', 'gemv_awq_w4a16', 'group_norm_silu_pad3d', 'group_norm_silu_pad3d_out', 'int8_linear', 'mesh_bvh', 'min_cut', 'na3d', 'prepare_int4_weight_for_int8_linear', 'quantize_and_rotate_rowwise', 'quantize_convrot_w4a4_weight', 'quantize_int8_convrot_weight', 'quantize_int8_rowwise', 'quantize_int8_tensorwise', 'quantize_mxfp8', 'quantize_nvfp4', 'quantize_per_tensor_fp8', 'quantize_svdquant_w4a4', 'quantize_w4a8_int8_weight', 'rms_adaln', 'rms_rope', 'rms_rope1', 'rms_rope1_', 'rms_rope_', 'rms_rope_split_half', 'rms_rope_split_half1', 'rms_rope_split_half1_', 'rms_rope_split_half_', 'rotate_int8_convrot_weight', 'scaled_mm_nvfp4', 'scaled_mm_svdquant_w4a4', 'sol_attn', 'stochastic_rounding_fp8', 'w4a8_int8_linear', 'w4a8_packed_linear']}
+[32m[INFO][0m Found comfy_kitchen backend hip: {'available': False, 'disabled': False, 'unavailable_reason': 'PyTorch ROCm/HIP runtime not available', 'capabilities': []}
+[32m[INFO][0m pytorch version: 2.11.0+cu128
+[ComfyUI-Error] [32m[INFO][0m Device: cuda:0 NVIDIA GB10 : native
+[ComfyUI-Error] [32m[INFO][0m Using pytorch attention
+[ComfyUI-Error] [32m[INFO][0m Python version: 3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]
+[ComfyUI-Error] [32m[INFO][0m ComfyUI version: 0.42.1
+ModuleNotFoundError: No module named 'numexpr'
+ModuleNotFoundError: No module named 'cv2'
+ModuleNotFoundError: No module named 'cv2'
+ModuleNotFoundError: No module named 'cv2'
+ModuleNotFoundError: No module named 'cv2'
+ModuleNotFoundError: No module named 'cv2'
+ModuleNotFoundError: No module named 'segment_anything'
+ModuleNotFoundError: No module named 'cv2'
+(pysssss:WD14Tagger) [DEBUG] Using ORT providers: CUDAExecutionProvider, CPUExecutionProvider
+ModuleNotFoundError: No module named 'insightface'
+ModuleNotFoundError: No module named 'deepdiff'
+ModuleNotFoundError: No module named 'cv2'
+[ComfyUI-Error] [32m[INFO][0m    0.0 seconds (IMPORT FAILED): /root/ComfyUI/custom_nodes/ComfyUI-Impact-Pack
+[ComfyUI-Error] [32m[INFO][0m    0.0 seconds (IMPORT FAILED): /root/ComfyUI/custom_nodes/comfyui_controlnet_aux
+[ComfyUI-Error] [32m[INFO][0m    0.0 seconds (IMPORT FAILED): /root/ComfyUI/custom_nodes/comfyui_segment_anything
+[ComfyUI-Error] [32m[INFO][0m    0.0 seconds (IMPORT FAILED): /root/ComfyUI/custom_nodes/ComfyUI-Crystools
+[ComfyUI-Error] [32m[INFO][0m    0.0 seconds (IMPORT FAILED): /root/ComfyUI/custom_nodes/PuLID_ComfyUI
+[ComfyUI-Error] [32m[INFO][0m    0.0 seconds (IMPORT FAILED): /root/ComfyUI/custom_nodes/ComfyUI-Impact-Subpack
+[ComfyUI-Error] [32m[INFO][0m    0.0 seconds (IMPORT FAILED): /root/ComfyUI/custom_nodes/ComfyUI_InstantID
+[ComfyUI-Error] [32m[INFO][0m    0.0 seconds (IMPORT FAILED): /root/ComfyUI/custom_nodes/ComfyUI-layerdiffuse
+[ComfyUI-Error] [32m[INFO][0m    0.0 seconds (IMPORT FAILED): /root/ComfyUI/custom_nodes/ComfyUI_FaceAnalysis
+[ComfyUI-Error] [32m[INFO][0m    0.0 seconds (IMPORT FAILED): /root/ComfyUI/custom_nodes/ComfyUI_FizzNodes
+[ComfyUI-Error] [32m[INFO][0m    0.0 seconds (IMPORT FAILED): /root/ComfyUI/custom_nodes/ComfyUI-Inspire-Pack
+[ComfyUI-Error] [32m[INFO][0m    0.0 seconds (IMPORT FAILED): /root/ComfyUI/custom_nodes/ComfyUI-VideoHelperSuite
+[ComfyUI-Error] [32m[INFO][0m Using pytorch attention in VAE
+[ComfyUI-Error] [32m[INFO][0m Using pytorch attention in VAE
+[ComfyUI-Error] [32m[INFO][0m VAE load device: cuda:0, offload device: cpu, dtype: torch.bfloat16
+[ComfyUI-Error] [32m[INFO][0m CLIP/text encoder model load device: cuda:0, offload device: cpu, current: cpu, dtype: torch.float16
+[ComfyUI-Error] [32m[INFO][0m loaded completely; 21135.38 MB usable, 235.84 MB loaded, full load: True
+[ComfyUI-Error] [32m[INFO][0m loaded completely; 21117.50 MB usable, 1639.41 MB loaded, full load: True
+[ComfyUI-Error] 100%|██████████| 20/20 [00:03<00:00,  8.18it/s]
+[ComfyUI-Error] 100%|██████████| 20/20 [00:03<00:00,  6.15it/s]
+[ComfyUI-Error] [32m[INFO][0m loaded completely; 20847.69 MB usable, 159.56 MB loaded, full load: True
+[ComfyUI-Error] [32m[INFO][0m [32mPrompt executed in 9.41 seconds[0m

@@ -1,0 +1,6 @@
+comfyuisharev3-shared          comfyuisharev3-c56757bd-5mj7h                            3/3     Running   0             11h
+kube-system                    hami-device-plugin-jr6vr                                 2/2     Running   0             43h
+kube-system                    hami-nvidia-dcgm-exporter-plfm6                          1/1     Running   0             43h
+kube-system                    hami-scheduler-564cc98697-wqltq                          2/2     Running   0             43h
+kube-system                    hami-webui-d6d768d66-gczfp                               2/2     Running   0             43h
+windowsarm-REDACTED_OWNER       windowsarm-7fdbb465-st6sp                                3/3     Running   0             40h

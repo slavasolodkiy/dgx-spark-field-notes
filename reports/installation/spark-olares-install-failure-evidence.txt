@@ -1,0 +1,131 @@
+# REDACTED DIAGNOSTIC CAPTURE; identifiers only changed.
+SSH diagnostic capture, 2026-10-23 UTC. PTY wrapping retained; external IP redacted.
+stty col<me/olares/.olares/versions/v1.12.7/logs/install.log
+
+=== STATUS ===
+
+Olares
+  State                system-error   (one or more critical pods are not running
+g)
+  Olaresd state        running
+  Name                 -
+  Version              1.12.7
+  Olaresd version      v1.12.7
+  Installed at         -
+  Initialized at       -
+
+System
+  Device               Selfhosted
+  Hostname             olares
+  OS                   linux arm64 Linux olares 6.14.0-1015-nvidia #15-Ubuntu SM
+MP PREEMPT_DYNAMIC Tue Nov 25 18:02:16 UTC 2025 aarch64 aarch64 aarch64 GNU/Linux
+  OS version           24.04
+  CPU                  GB10 Spark CPU @ 3.9GHz
+  Memory               121 G
+  Disk                 3753 G
+  GPU                  -
+
+Network
+  Wired                yes
+  Wi-Fi                no
+  Wi-Fi SSID           -
+  Host IP              [SPARK_LAN_IP]
+  External IP          [redacted external IP]
+
+Install / Uninstall
+  Installing           failed   (14%)
+  Uninstalling         -
+
+Upgrade
+  Target               -
+  State                -
+  Step                 -
+  Last error           -
+  Download state       -
+  Download step        -
+  Download error       -
+
+Logs collection
+  State                -
+
+Pressures
+  (none)
+
+Other
+  FRP enabled          -
+  FRP server           -
+  Container mode       -
+active
+active
+active
+  UNIT LOAD ACTIVE SUB DESCRIPTION
+
+0 loaded units listed.
+NAME     STATUS   ROLES                         AGE   VERSION
+olares   Ready    control-plane,master,worker   15m   v1.33.3+k3s1
+NAMESPACE                      NAME                                           RE
+EADY   STATUS             RESTARTS        AGE
+kube-system                    calico-kube-controllers-7896849f9b-k96nw       1/
+/1     Running            0               15m
+kube-system                    calico-node-fhz7l                              1/
+/1     Running            0               15m
+kube-system                    coredns-5595b9f6bc-g6nbl                       1/
+/1     Running            0               15m
+kube-system                    hami-scheduler-564cc98697-2b5ck                1/
+/2     CrashLoopBackOff   7 (3m48s ago)   14m
+kube-system                    hami-webui-d6d768d66-vncdn                     2/
+/2     Running            0               14m
+kube-system                    kube-multus-ds-qzqdj                           1/
+/1     Running            0               15m
+kube-system                    openebs-localpv-provisioner-5dcc9bf9d5-v24cm   1/
+/1     Running            0               15m
+kubesphere-monitoring-system   kube-state-metrics-7db4b8f674-dxr2p            3/
+/3     Running            0               14m
+kubesphere-monitoring-system   node-exporter-csftf                            2/
+/2     Running            0               15m
+kubesphere-monitoring-system   prometheus-k8s-0                               2/
+/2     Running            0               14m
+kubesphere-monitoring-system   prometheus-operator-7988b6dd-gkzg7             2/
+/2     Running            0               15m
+kubesphere-system              ks-apiserver-7cb595c985-kkqwz                  1/
+/1     Running            0               14m
+
+=== GPU PLUGIN ===
+NAME                 DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE S
+SELECTOR                          AGE   CONTAINERS                   IMAGES      
+                               SELECTOR
+hami-device-plugin   0         0         0       0            0           gpu.by
+ytetrade.io/cuda-supported=true   14m   device-plugin,vgpu-monitor   beclab/hami:
+:v2.6.28,beclab/hami:v2.6.28   app.kubernetes.io/component=hami-device-plugin,app
+p.kubernetes.io/instance=hami,app.kubernetes.io/name=hami
+{"beta.kubernetes.io/arch":"arm64","beta.kubernetes.io/os":"linux","kubernetes.i
+io/arch":"arm64","kubernetes.io/hostname":"olares","kubernetes.io/os":"linux","no
+ode-role.kubernetes.io/control-plane":"true","node-role.kubernetes.io/master":"tr
+rue","node-role.kubernetes.io/worker":""}
+=== NVIDIA ===
+SecureBoot enabled
+Please see the log entries 'Kernel module load error' and 'Kernel messages' at t
+the end of the file '/var/log/nvidia-installer.log' for more information.        
+-> Kernel module load error: Key was rejected by service
+[  878.134293] Loading of unsigned module is rejected
+ERROR: Installation has failed.  Please see the file '/var/log/nvidia-installer.
+.log' for details.  You may find suggestions on fixing installation problems in t
+the README available on the Linux driver download page at www.nvidia.com.        
+
+=== EXTENDER ERROR ===
+{"terminated":{"containerID":"containerd://7186aa24dfe5e8b96073df7685f08a0aa3c5b
+b5388b8527b5bacd9cd174f8a9b8","exitCode":128,"finishedAt":"2026-10-23T12:32:41Z",
+,"message":"failed to create containerd task: failed to create shim task: OCI run
+ntime create failed: could not apply required modification to OCI specification: 
+ error modifying OCI spec: failed to create the automatic CDI modifier: failed to
+o generate CDI spec for mode \"auto\": failed to construct device spec generators
+s: failed to initialize NVML: ERROR_LIBRARY_NOT_FOUND","reason":"StartError","sta
+artedAt":"1970-01-01T00:00:00Z"}}
+=== INSTALL TAIL ===
+2026-10-23T12:29:49.311Z        Local retry: [olares] CheckGPUState
+2026-10-23T12:29:59.486Z        olares GPU Container State is Pending
+2026-10-23T12:29:59.486Z        Local retry: [olares] CheckGPUState
+2026-10-23T12:30:09.630Z        olares GPU Container State is Pending
+2026-10-23T12:30:09.630Z        [A] olares: CheckGPUState failed (8m18.091176512
+2s)
+olares@olares:~$

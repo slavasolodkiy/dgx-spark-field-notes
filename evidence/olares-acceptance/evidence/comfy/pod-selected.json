@@ -1,0 +1,74 @@
+{
+  "labels": {
+    "app.bytetrade.io/shared-entrance": "true",
+    "applications.app.bytetrade.io/name": "comfyuisharev3",
+    "applications.app.bytetrade.io/owner": "REDACTED_OWNER",
+    "applications.app.bytetrade.io/raw-app-name": "comfyuisharev3",
+    "hami.io/vgpu-node": "olares",
+    "io.bytetrade.app": "true",
+    "io.kompose.network/chrome-default": "true",
+    "io.kompose.service": "comfyui",
+    "linkerd.io/control-plane-ns": "os-mesh",
+    "linkerd.io/proxy-deployment": "comfyuisharev3",
+    "linkerd.io/workload-ns": "comfyuisharev3-shared",
+    "pod-template-hash": "c56757bd"
+  },
+  "ownerReferences": [
+    {
+      "apiVersion": "apps/v1",
+      "blockOwnerDeletion": true,
+      "controller": true,
+      "kind": "ReplicaSet",
+      "name": "comfyuisharev3-c56757bd",
+      "uid": "be2f7940-326e-42e1-bf6e-a58ff6d096e7"
+    }
+  ],
+  "hami": {
+    "hami.io/bind-phase": "success",
+    "hami.io/bind-time": "1792875541",
+    "hami.io/vgpu-devices-allocated": ";GPU-REDACTED,NVIDIA,22528,0,1:;;",
+    "hami.io/vgpu-devices-to-allocate": ";;;;",
+    "hami.io/vgpu-node": "olares",
+    "hami.io/vgpu-time": "1792875541"
+  },
+  "schedulerName": "hami-scheduler",
+  "runtimeClassName": "nvidia",
+  "containers": [
+    {
+      "name": "comfyui",
+      "image": "beclab/comfyui_launcher-arm64:v0.42.1-fe1.58.0-launcher0.2.54-arm64",
+      "resources": {
+        "limits": {
+          "cpu": "4",
+          "memory": "70Gi",
+          "nvidia.com/gpu": "1"
+        },
+        "requests": {
+          "cpu": "4",
+          "memory": "22Gi",
+          "nvidia.com/gpu": "1"
+        }
+      }
+    }
+  ],
+  "status": [
+    {
+      "name": "comfyui",
+      "imageID": "docker.io/beclab/comfyui_launcher-arm64@sha256:0ad052806ba478d00cd3635b56009ecdbff8d14da7f0080feb9ae3da884c8be6",
+      "ready": true,
+      "restartCount": 0
+    },
+    {
+      "name": "linkerd-proxy",
+      "imageID": "sha256:be4ecddc0466e5ad2af776778ffb6e100c0aa55dbc6073e74adf11b83c992de0",
+      "ready": true,
+      "restartCount": 0
+    },
+    {
+      "name": "olares-mesh-in-agent",
+      "imageID": "sha256:2425de80c14ad4322e259fb1f4eae2783119a3a84112e2a68642be4f3befb5c0",
+      "ready": true,
+      "restartCount": 0
+    }
+  ]
+}

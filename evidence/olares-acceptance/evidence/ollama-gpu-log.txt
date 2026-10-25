@@ -1,0 +1,37 @@
+time=2026-10-24T15:43:23.746Z level=INFO source=routes.go:2435 msg="Listening on [::]:11434 (version 0.40.2)"
+time=2026-10-24T15:43:29.446Z level=INFO source=llama_server.go:295 msg="skipping CUDA device — compute capability not in compiled architectures" device="NVIDIA GB10" cc=1210 archs="[500 520 600 610 700 750 800 860 890 900 1000 1200]" libDirs="[/usr/lib/ollama /usr/lib/ollama/cuda_v12]"
+time=2026-10-24T15:43:32.093Z level=INFO source=types.go:32 msg="inference compute" id=0 filter_id=0 library=CUDA compute=12.1 name=CUDA0 description="NVIDIA GB10" libdirs=ollama,cuda_v13 driver=13.2 pci_id=000f:01:00.0 type=iGPU total="4.2 GiB" available="107.5 GiB"
+time=2026-10-24T15:44:05.097Z level=INFO source=sched.go:630 msg="gpu memory" id=0 library=CUDA available="107.3 GiB" free="107.7 GiB" minimum="457.0 MiB" overhead="0 B"
+ggml_cuda_init: found 1 CUDA devices (Total VRAM: 4352 MiB):
+load_backend: loaded CUDA backend from /usr/lib/ollama/cuda_v13/libggml-cuda.so
+cmn  common_param:   - CUDA0   : NVIDIA GB10 (4352 MiB, 110360 MiB free)
+cmn  common_param: system_info: n_threads = 20 (n_threads_batch = 20) / 20 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | MATMUL_INT8 = 1 | SVE = 1 | DOTPROD = 1 | SVE_CNT = 16 | REPACK = 1 | CUDA : ARCHS = 750,800,860,870,890,900,1000,1030,1100,1200,1210 | USE_GRAPHS = 1 | FA_QUANTS = q4_0-q4_0,q8_0-q8_0,f16-f16,bf16-bf16 | BLACKWELL_NATIVE_FP4 = 1 | 
+common_memory_breakdown_print: |   - CUDA0 (GB10)       |  4352 = 110314 + ( 422 =   373 +      12 +      35) +     -106384 |
+llama_prepare_model_devices: using device CUDA0 (NVIDIA GB10) (000f:01:00.0) - 110314 MiB free
+load_tensors: offloading output layer to GPU
+load_tensors: offloading 23 repeating layers to GPU
+load_tensors: offloaded 25/25 layers to GPU
+load_tensors:        CUDA0 model buffer size =   373.73 MiB
+load_tensors:    CUDA_Host model buffer size =   137.94 MiB
+llama_context:  CUDA_Host  output buffer size =     0.58 MiB
+llama_kv_cache:      CUDA0 KV buffer size =    12.77 MiB
+sched_reserve:      CUDA0 compute buffer size =    35.79 MiB
+sched_reserve:  CUDA_Host compute buffer size =     5.54 MiB
+srv  llama_server: listening on http://127.0.0.1:46039
+slot print_timing: id  0 | task 0 | prompt eval time =   55303.11 ms /    30 tokens ( 1843.44 ms per token,     0.54 tokens per second)
+slot print_timing: id  0 | task 0 |        eval time =    2135.50 ms /    10 tokens (  237.28 ms per token,     4.21 tokens per second)
+slot print_timing: id  0 | task 0 |       total time =   57438.61 ms /    40 tokens
+slot print_timing: id  0 | task 0 |    graphs reused =          9
+[wrapper-ollama] preload completed in 93s
+slot print_timing: id  0 | task 11 | prompt eval time =       8.34 ms /    60 tokens (    0.14 ms per token,  7193.38 tokens per second)
+slot print_timing: id  0 | task 11 |        eval time =     252.42 ms /    42 tokens (    6.16 ms per token,   162.43 tokens per second)
+slot print_timing: id  0 | task 11 |       total time =     260.76 ms /   102 tokens
+slot print_timing: id  0 | task 11 |    graphs reused =         49
+slot print_timing: id  0 | task 54 | prompt eval time =       6.98 ms /     1 tokens (    6.98 ms per token,   143.35 tokens per second)
+slot print_timing: id  0 | task 54 |        eval time =     357.55 ms /    42 tokens (    8.72 ms per token,   114.67 tokens per second)
+slot print_timing: id  0 | task 54 |       total time =     364.52 ms /    43 tokens
+slot print_timing: id  0 | task 54 |    graphs reused =         91
+slot print_timing: id  0 | task 97 | prompt eval time =      10.37 ms /     1 tokens (   10.37 ms per token,    96.44 tokens per second)
+slot print_timing: id  0 | task 97 |        eval time =     351.96 ms /    42 tokens (    8.58 ms per token,   116.49 tokens per second)
+slot print_timing: id  0 | task 97 |       total time =     362.33 ms /    43 tokens
+slot print_timing: id  0 | task 97 |    graphs reused =        133

@@ -1,0 +1,32 @@
+{
+  "name": "0.40.2",
+  "full_size": 3779377170,
+  "images": [
+    {
+      "architecture": "amd64",
+      "features": "",
+      "variant": null,
+      "digest": "sha256:31650ae0d08bde9c8bbd845d27f2da31acddf6ff735523869d8e5ee7a9969b03",
+      "os": "linux",
+      "os_features": "",
+      "os_version": null,
+      "size": 3779377170,
+      "status": "active",
+      "last_pulled": "2026-10-24T15:22:56.378984848Z",
+      "last_pushed": "2026-10-08T18:20:44.409309197Z"
+    },
+    {
+      "architecture": "arm64",
+      "features": "",
+      "variant": null,
+      "digest": "sha256:fd3acc213049eb340e64996e49145e1e8dd5d054a29ebcee12a6eff215f4b117",
+      "os": "linux",
+      "os_features": "",
+      "os_version": null,
+      "size": 2805680768,
+      "status": "active",
+      "last_pulled": "2026-10-24T15:11:14.861640029Z",
+      "last_pushed": "2026-10-08T18:20:05.896000671Z"
+    }
+  ]
+}

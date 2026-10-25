@@ -1,0 +1,7 @@
+kube-system                    hami-device-plugin-jr6vr                                 2/2     Running   0             26h
+kube-system                    hami-nvidia-dcgm-exporter-plfm6                          1/1     Running   0             26h
+kube-system                    hami-scheduler-564cc98697-wqltq                          2/2     Running   0             26h
+kube-system                    hami-webui-d6d768d66-gczfp                               2/2     Running   0             26h
+ollamallmbasev339e68d-shared   llminit-5b87b4748-pz96m                                  3/3     Running   0             12m
+ollamallmbasev339e68d-shared   ollamallmbasev339e68d-6cd987669-xjzvl                    3/3     Running   0             12m
+windowsarm-REDACTED_OWNER       windowsarm-7fdbb465-st6sp                                3/3     Running   0             24h

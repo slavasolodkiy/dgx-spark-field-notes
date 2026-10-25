@@ -1,0 +1,153 @@
+{
+  "f5dc2237-2f5a-43c3-8572-fa9ba25242a2": {
+    "prompt": [
+      0,
+      "f5dc2237-2f5a-43c3-8572-fa9ba25242a2",
+      {
+        "3": {
+          "class_type": "KSampler",
+          "inputs": {
+            "seed": 42,
+            "steps": 20,
+            "cfg": 7.0,
+            "sampler_name": "euler",
+            "scheduler": "normal",
+            "denoise": 1.0,
+            "model": [
+              "4",
+              0
+            ],
+            "positive": [
+              "6",
+              0
+            ],
+            "negative": [
+              "7",
+              0
+            ],
+            "latent_image": [
+              "5",
+              0
+            ]
+          }
+        },
+        "4": {
+          "class_type": "CheckpointLoaderSimple",
+          "inputs": {
+            "ckpt_name": "v1-5-pruned-emaonly-fp16.safetensors"
+          }
+        },
+        "5": {
+          "class_type": "EmptyLatentImage",
+          "inputs": {
+            "width": 512,
+            "height": 512,
+            "batch_size": 1
+          }
+        },
+        "6": {
+          "class_type": "CLIPTextEncode",
+          "inputs": {
+            "text": "Product photograph of a small white ceramic planter with a green succulent on a light wooden desk, soft natural window light, clean background, high detail",
+            "clip": [
+              "4",
+              1
+            ]
+          }
+        },
+        "7": {
+          "class_type": "CLIPTextEncode",
+          "inputs": {
+            "text": "text, watermark, blurry, low quality, distorted",
+            "clip": [
+              "4",
+              1
+            ]
+          }
+        },
+        "8": {
+          "class_type": "VAEDecode",
+          "inputs": {
+            "samples": [
+              "3",
+              0
+            ],
+            "vae": [
+              "4",
+              2
+            ]
+          }
+        },
+        "9": {
+          "class_type": "SaveImage",
+          "inputs": {
+            "filename_prefix": "sprint7b_sd15_seed42",
+            "images": [
+              "8",
+              0
+            ]
+          }
+        }
+      },
+      {
+        "client_id": "sprint7b-acceptance",
+        "create_time": 1792917471527
+      },
+      [
+        "9"
+      ]
+    ],
+    "outputs": {
+      "9": {
+        "images": [
+          {
+            "filename": "sprint7b_sd15_seed42_00001_.png",
+            "subfolder": "",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 512,
+              "height": 512
+            }
+          }
+        ]
+      }
+    },
+    "status": {
+      "status_str": "success",
+      "completed": true,
+      "messages": [
+        [
+          "execution_start",
+          {
+            "prompt_id": "f5dc2237-2f5a-43c3-8572-fa9ba25242a2",
+            "timestamp": 1792917471528
+          }
+        ],
+        [
+          "execution_cached",
+          {
+            "nodes": [],
+            "prompt_id": "f5dc2237-2f5a-43c3-8572-fa9ba25242a2",
+            "timestamp": 1792917471531
+          }
+        ],
+        [
+          "execution_success",
+          {
+            "prompt_id": "f5dc2237-2f5a-43c3-8572-fa9ba25242a2",
+            "timestamp": 1792917480810
+          }
+        ]
+      ]
+    },
+    "meta": {
+      "9": {
+        "node_id": "9",
+        "display_node": "9",
+        "parent_node": null,
+        "real_node_id": "9"
+      }
+    }
+  }
+}

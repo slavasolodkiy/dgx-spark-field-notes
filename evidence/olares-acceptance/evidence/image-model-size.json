@@ -1,0 +1,10 @@
+{
+  "rfilename": "v1-5-pruned-emaonly-fp16.safetensors",
+  "blobId": "2b9f5265289c9cc66100187c4db39636dd376122",
+  "size": 2132696762,
+  "lfs": {
+    "sha256": "e9476a13728cd75d8279f6ec8bad753a66a1957ca375a1464dc63b37db6e3916",
+    "size": 2132696762,
+    "pointerSize": 135
+  }
+}

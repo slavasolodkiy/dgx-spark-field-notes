@@ -1,0 +1,19 @@
+{
+  "name": "v0.42.1-fe1.58.0-launcher0.2.54-arm64",
+  "full_size": 9639977041,
+  "images": [
+    {
+      "architecture": "arm64",
+      "features": "",
+      "variant": null,
+      "digest": "sha256:0ad052806ba478d00cd3635b56009ecdbff8d14da7f0080feb9ae3da884c8be6",
+      "os": "linux",
+      "os_features": "",
+      "os_version": null,
+      "size": 9639977041,
+      "status": "active",
+      "last_pulled": "2026-10-24T10:39:27.235321778Z",
+      "last_pushed": "2026-10-19T08:07:44.750912479Z"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "model": "qwen2.5:0.5b",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Summarize this maintenance note in three concise bullet points, preserving all numbers: The backup runs daily at 02:00. Keep 7 daily copies and 4 weekly copies. A restore test is required every month. Alert the operator if the backup fails."
+    }
+  ],
+  "stream": false,
+  "keep_alive": "5m",
+  "options": {
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 2048,
+    "num_predict": 160
+  }
+}

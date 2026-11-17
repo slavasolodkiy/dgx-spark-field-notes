@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Agent-first personal computers: machines that an AI assistant can discover, operate, recover and use with limited, revocable authority — while the human stays in control.">
+<meta name="color-scheme" content="light"><title>Agent-First. Still Human-Owned. — PROSUMER</title>
+<style>
+
+/* PROSUMER FIELD GUIDE · Design language adapted from the user-supplied identity.free reference.
+   All content and visuals are authored HTML/CSS. No external framework or image dependencies. Small progressive-enhancement script for the working lens selector. */
+:root{--bone:#f3ecd7;--paper:#fffdf7;--ink:#0f0d0a;--muted:#443e34;--soft:#e8e0c6;--line:#a8a08b;--sun:#ffce1f;--blue:#0a3cff;--pink:#ff3ea5;--jade:#176c55;--phos:#8fff3d;--r:10px;--mono:ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace;--body:'Space Grotesk',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;--display:'Arial Black',Impact,system-ui,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;color:var(--ink);background:var(--bone);font:18px/1.65 var(--body);-webkit-font-smoothing:antialiased}a{color:inherit;text-underline-offset:4px}a:hover{color:var(--blue)}a:focus-visible{outline:3px solid var(--blue);outline-offset:4px}::selection{background:var(--sun);color:var(--ink)}.skip{position:absolute;left:12px;top:-80px;background:var(--sun);z-index:90;padding:8px 16px;font-weight:800}.skip:focus{top:12px}.shell{width:min(1200px,calc(100% - 56px));margin:0 auto}.mono{font-family:var(--mono)}.eyebrow{font:700 12px/1.6 var(--mono);text-transform:uppercase;letter-spacing:.075em}.small{font:13px/1.6 var(--mono)}.subdued{color:var(--muted)}.visually-hidden{position:absolute;width:1px;height:1px;clip:rect(0,0,0,0);overflow:hidden;white-space:nowrap}.rule{border-top:2px solid var(--ink)}
+.sitebar{position:sticky;top:0;background:var(--bone);border-bottom:3px solid var(--ink);z-index:40}.sitebar-inner{max-width:1240px;margin:auto;padding:13px 28px;display:flex;justify-content:space-between;align-items:center;gap:24px}.brand{display:flex;align-items:center;gap:12px;font:950 20px/1 var(--display);letter-spacing:-.045em;text-decoration:none;white-space:nowrap}.mark{width:29px;height:29px;display:grid;grid-template-columns:1fr 1fr;gap:2px;border:2px solid var(--ink);background:var(--ink);box-shadow:3px 3px 0 var(--ink)}.mark i:nth-child(1){background:var(--sun)}.mark i:nth-child(2){background:var(--pink)}.mark i:nth-child(3){background:var(--jade)}.mark i:nth-child(4){background:var(--blue)}.site-nav{display:flex;gap:7px;flex-wrap:wrap}.site-nav a{font:700 11px/1.25 var(--mono);text-transform:uppercase;letter-spacing:.05em;text-decoration:none;border:2px solid var(--ink);border-radius:99px;padding:10px 14px;background:var(--paper);transition:transform .12s}.site-nav a:hover{color:var(--ink);transform:translateY(-2px);background:var(--sun)}.site-nav a[aria-current="page"]{background:var(--blue);color:white}
+.hero{position:relative;border-bottom:3px solid var(--ink);overflow:hidden;background:linear-gradient(110deg,var(--bone),#fbf3de)}.hero:before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(15,13,10,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(15,13,10,.055) 1px,transparent 1px);background-size:54px 54px;pointer-events:none}.hero-wrap{position:relative;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(300px,.75fr);gap:52px;align-items:center;padding:76px 0 84px}.hero-top{display:inline-flex;align-items:center;gap:9px;background:var(--ink);color:var(--sun);border-radius:3px;padding:8px 12px;margin:0 0 25px;font:800 11px/1.35 var(--mono);letter-spacing:.08em;text-transform:uppercase}.hero-top:before{content:'';width:8px;height:8px;border-radius:50%;background:var(--phos)}h1{margin:0 0 26px;font:950 clamp(50px,5.5vw,76px)/1.01 var(--display);letter-spacing:-.055em;text-transform:uppercase;max-width:12ch}h1 span{display:inline-block;background:var(--sun);padding:3px 10px 6px;margin-left:-10px;box-shadow:6px 6px 0 var(--ink)}.hero-lede{font-size:clamp(21px,2.2vw,26px);font-weight:600;line-height:1.38;letter-spacing:-.025em;max-width:37ch;margin:0 0 22px}.hero-plain{font-size:17px;line-height:1.6;max-width:55ch;margin:0 0 29px}.actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.btn{display:inline-block;text-decoration:none;font:750 14px/1.2 var(--body);border:2px solid var(--ink);border-radius:7px;background:var(--blue);color:white;padding:13px 18px;box-shadow:4px 4px 0 var(--ink)}.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink);color:white}.btn.secondary{color:var(--ink);background:var(--paper)}.meta{margin:25px 0 0;font:12px/1.65 var(--mono);color:var(--muted)}
+/* Original typography-led object card, not a product photo */
+.instrument{background:var(--ink);color:white;border:3px solid var(--ink);border-radius:14px;box-shadow:10px 10px 0 var(--pink);overflow:hidden;transform:rotate(1deg)}.instrument-head{display:flex;justify-content:space-between;align-items:center;gap:8px;background:var(--sun);color:var(--ink);padding:13px 16px;border-bottom:3px solid var(--ink);font:800 11px/1.2 var(--mono)}.instrument-inner{padding:29px 26px 22px}.instrument-id{font:700 12px var(--mono);letter-spacing:.12em;color:var(--phos)}.instrument-num{font:950 clamp(72px,8vw,116px)/.93 var(--display);letter-spacing:-.08em;margin:17px 0 0}.instrument-unit{font:800 18px/1.2 var(--mono);margin:3px 0 30px;color:var(--sun)}.memory-rail{display:grid;grid-template-columns:repeat(8,1fr);gap:5px;margin-bottom:13px}.memory-rail i{height:44px;border:1px solid var(--ink);background:var(--sun)}.memory-rail i:nth-child(2n){background:var(--pink)}.memory-rail i:nth-child(3n){background:var(--phos)}.memory-rail i:nth-child(5n){background:#6a86ff}.instrument-foot{border-top:1px solid #77706a;padding:17px 0 0;font:12px/1.65 var(--mono);color:#f3ecd7}.instrument-foot strong{display:block;color:var(--phos)}.instrument-no{font:700 12px var(--mono);color:#aaa39a;margin-top:20px}
+.ticker{background:var(--ink);color:var(--bone);border-bottom:3px solid var(--ink)}.ticker .shell{display:flex;flex-wrap:wrap;justify-content:space-between;gap:7px 18px;padding:16px 0;font:750 12px/1.5 var(--mono);letter-spacing:.025em}.ticker b{color:var(--phos)}
+.intro{display:grid;grid-template-columns:180px minmax(0,1fr);gap:45px;padding:46px 0 38px}.intro .label{font:750 12px/1.5 var(--mono);text-transform:uppercase;color:var(--jade)}.intro .copy{max-width:74ch;font-size:18px;line-height:1.7}.intro .copy p{margin:0 0 16px}.intro .copy p:last-child{margin:0}
+.section{padding:70px 0 74px;border-top:2px solid var(--ink)}.section-hd{display:grid;grid-template-columns:156px 1fr;gap:40px;align-items:start;margin-bottom:28px}.section-n{display:flex;align-items:center;gap:13px;font:750 12px/1.5 var(--mono);text-transform:uppercase;letter-spacing:.035em}.section-n strong{display:grid;place-items:center;width:51px;height:51px;flex:none;border:2px solid var(--ink);border-radius:8px;box-shadow:3px 3px 0 var(--ink);background:var(--sun);font:900 24px var(--display)}h2{font:900 clamp(30px,3.55vw,48px)/1.12 var(--display);letter-spacing:-.045em;margin:0 0 12px;max-width:21ch}h3{font-size:23px;line-height:1.2;margin:0 0 10px;letter-spacing:-.025em}.section-hd p{margin:0;max-width:66ch;font-size:17px}.section-body{margin-left:196px}.section-body>p{max-width:69ch}.source-note{font:12px/1.6 var(--mono);color:var(--muted);margin:17px 0}.linkline{font:700 13px/1.8 var(--mono);margin:22px 0 0}.linkline a{margin-right:12px}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.stat{min-width:0;background:var(--paper);border:2px solid var(--ink);border-radius:10px;padding:22px;box-shadow:4px 4px 0 var(--ink)}.stat:nth-child(2){background:#e7eafc}.stat:nth-child(3){background:#f7e4ee}.stat .val{font:900 clamp(32px,4vw,54px)/1.1 var(--display);letter-spacing:-.055em}.stat .lab{font:700 11px/1.5 var(--mono);text-transform:uppercase;letter-spacing:.04em;margin:8px 0 14px}.stat p{font-size:15px;line-height:1.6;margin:0}.tag{display:inline-block;border:1px solid var(--ink);background:var(--paper);padding:3px 7px;border-radius:3px;font:750 10px/1.2 var(--mono);letter-spacing:.03em;text-transform:uppercase;white-space:nowrap}.tag.vendor{background:var(--sun)}.tag.observed{background:var(--phos)}.tag.untested{background:#ebd4ec}.tag.mixed{background:#d9e3ff}.keyline{background:var(--ink);color:var(--bone);padding:19px 22px;border-left:7px solid var(--phos);margin:22px 0 0;font-size:19px;font-weight:700;line-height:1.45}
+.floors{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.floor{background:var(--paper);border:2px solid var(--ink);border-radius:9px;padding:21px 19px 25px;min-width:0;box-shadow:3px 3px 0 var(--ink)}.floor:nth-child(1){background:#fce49b}.floor:nth-child(2){background:#e8f1df}.floor:nth-child(3){background:#e1e6ff}.floor:nth-child(4){background:#ffd9e9}.floor .fn{font:900 38px/1 var(--display);letter-spacing:-.07em}.floor .q{font-size:20px;line-height:1.16;font-weight:850;margin:17px 0 13px}.floor p{font-size:15px;line-height:1.58;margin:0}.floor .type{font:700 11px var(--mono);text-transform:uppercase;margin-top:16px;border-top:1px solid #777;padding-top:10px}
+.pairs{display:grid;grid-template-columns:1fr 1fr;gap:15px}.panel{background:var(--paper);border:2px solid var(--ink);border-radius:10px;padding:27px 28px;box-shadow:4px 4px 0 var(--ink)}.panel .panel-label{font:750 12px/1.4 var(--mono);margin:0 0 17px;text-transform:uppercase}.panel h3{font:850 29px/1.13 var(--display);letter-spacing:-.035em;margin-bottom:16px}.panel p{font-size:16px;line-height:1.7}.panel p:last-child{margin-bottom:0}.panel.a{border-top:11px solid var(--blue)}.panel.b{border-top:11px solid var(--pink)}.caveat{margin-top:18px;background:#f7e3cc;padding:17px 21px;border-left:5px solid var(--ink);font-size:16px;line-height:1.65}
+.matrix{border:2px solid var(--ink);background:var(--paper);border-radius:9px;overflow:hidden}.matrix-row{display:grid;grid-template-columns:minmax(145px,.83fr) minmax(0,1.5fr) minmax(135px,.84fr);gap:18px;padding:17px 19px;border-top:1px solid var(--line);align-items:start}.matrix-row:first-child{border:0}.matrix-head{background:var(--ink);color:var(--bone);font:750 11px/1.5 var(--mono);letter-spacing:.05em;text-transform:uppercase}.matrix .cap{font-weight:800;font-size:16px;line-height:1.4}.matrix .finding{font-size:15px;line-height:1.6}.matrix .assessment{font:700 12px/1.55 var(--mono)}.matrix .assessment .tag{white-space:normal}.matrix .assessment small{display:block;margin-top:7px;color:var(--muted);font:12px/1.45 var(--mono)}.matrix .matrix-head .assessment{color:var(--bone)}
+.reach{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.reach>div{padding:23px 22px;border:2px solid var(--ink);background:var(--paper);border-radius:8px}.reach>div:nth-child(2){background:#e6edfd}.reach>div:nth-child(3){background:#e8e4ef}.reach .reachnum{display:block;font:800 12px/1.5 var(--mono);color:var(--blue);margin-bottom:10px}.reach h3{font:850 21px/1.17 var(--display)}.reach p{font-size:15px;line-height:1.62;margin-bottom:0}
+.dark-section{background:var(--ink);color:var(--bone);border-top:3px solid var(--ink);border-bottom:3px solid var(--ink)}.dark-section .section{border-top:0}.dark-section .section-n strong{color:var(--ink);background:var(--phos)}.dark-section .section-hd p{color:#e7e0c6}.dark-section h2{color:var(--sun)}.dark-section a{color:var(--phos)}.dark-section a:hover{color:var(--sun)}.dark-section .quote{font:850 clamp(27px,3vw,41px)/1.18 var(--display);letter-spacing:-.035em;border-left:6px solid var(--phos);padding:12px 0 12px 24px;margin:0 0 23px;max-width:28ch}.dark-section .section-body p{line-height:1.75}.dark-section .small{color:#dcd7cc}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:13px;list-style:none;margin:0;padding:0;counter-reset:criteria}.checks li{counter-increment:criteria;border:2px solid var(--ink);border-radius:9px;background:var(--paper);padding:21px 24px;font-size:16px;line-height:1.65}.checks li:before{content:counter(criteria,decimal-leading-zero);display:inline-block;font:900 22px var(--display);padding:7px 10px;background:var(--sun);margin-right:13px;border:1px solid var(--ink)}.checks li b{font-weight:850}
+.receipt{border:2px solid var(--ink);background:var(--paper);box-shadow:5px 5px 0 var(--ink);border-radius:10px;overflow:hidden}.receipt-top{background:var(--sun);border-bottom:2px solid var(--ink);padding:14px 22px;font:850 12px var(--mono);display:flex;align-items:center;justify-content:space-between;gap:18px}.receipt-grid{display:grid;grid-template-columns:1fr 1fr}.receipt-grid>div{padding:18px 22px;border-bottom:1px solid var(--line);min-width:0}.receipt-grid>div:nth-child(odd){border-right:1px solid var(--line)}.receipt-grid label{display:block;font:750 11px/1.5 var(--mono);color:var(--muted);text-transform:uppercase;margin-bottom:5px}.receipt-grid p{margin:0;font-size:15px;line-height:1.5}.receipt-foot{padding:15px 22px;font:12px/1.6 var(--mono)}
+.sources{padding:45px 0 65px;border-top:2px solid var(--ink)}.sources h2{font-size:29px;letter-spacing:-.03em;margin:0 0 24px}.sources-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.sources-grid a{border-top:2px solid var(--ink);text-decoration:none;padding:15px 0;display:block}.sources-grid a:hover strong{text-decoration:underline}.sources-grid strong{font-size:16px;display:block;line-height:1.3}.sources-grid small{display:block;font:12px/1.55 var(--mono);color:var(--muted);margin-top:8px}.sources-grid a.primary{border-top:5px solid var(--blue)}.closing{border-top:3px solid var(--ink);background:var(--sun);padding:40px 0}.closing .shell{display:flex;justify-content:space-between;align-items:center;gap:24px}.closing p{font:900 clamp(23px,2.8vw,35px)/1.17 var(--display);letter-spacing:-.035em;max-width:23ch;margin:0}.closing a{flex-shrink:0;border:2px solid var(--ink);background:var(--paper);box-shadow:4px 4px 0 var(--ink);padding:12px 17px;text-decoration:none;font:750 12px/1.3 var(--mono)}footer{background:var(--ink);color:var(--bone);padding:23px 0}footer .shell{display:flex;justify-content:space-between;gap:18px;align-items:start;font:12px/1.6 var(--mono)}footer p{margin:0;max-width:84ch}footer a{color:var(--phos)}
+
+/* 26 OCT FIELD GUIDE / RETRO-FUTURE SIGNAL LAYER — small, purposeful movement */
+.hero{background:linear-gradient(113deg,#f3ecd7 0%,#fff2c0 48%,#f5d4e8 100%)}
+.hero:before{opacity:.83}
+.hero:after{content:"";position:absolute;right:-6%;bottom:-43%;width:54vw;height:54vw;max-width:690px;max-height:690px;border-radius:50%;background:radial-gradient(circle,rgba(255,62,165,.15) 0 31%,rgba(10,60,255,.09) 32% 33%,transparent 34%);pointer-events:none}
+.ornaments{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.orbit{position:absolute;width:310px;height:310px;right:2%;top:-170px;border:4px dashed rgba(10,60,255,.28);border-radius:50%;animation:orbit-drift 38s linear infinite}
+.geo{position:absolute;display:block;z-index:0}
+.geo-triangle{right:12%;top:9%;width:37px;height:37px;background:var(--jade);clip-path:polygon(50% 0,100% 90%,0 90%);animation:float-geo 7s ease-in-out infinite alternate}
+.geo-cross{left:49%;top:17%;width:44px;height:44px;opacity:.9;background:var(--pink);clip-path:polygon(34% 0,66% 0,66% 34%,100% 34%,100% 66%,66% 66%,66% 100%,34% 100%,34% 66%,0 66%,0 34%,34% 34%);transform:rotate(14deg);animation:cross-wiggle 11s ease-in-out infinite}
+.geo-dots{right:5%;bottom:9%;width:85px;height:70px;background-image:radial-gradient(var(--blue) 2px,transparent 3px);background-size:17px 17px;opacity:.7}
+.hero-wrap{z-index:1;isolation:isolate}
+.hero-top{background:var(--blue);color:#fff;box-shadow:4px 4px 0 var(--ink);transform:rotate(-1deg)}
+.hero-top:before{background:var(--phos);box-shadow:0 0 0 3px rgba(143,255,61,.23);animation:beacon 3s ease-in-out infinite}
+.hero h1>span{position:relative;background:var(--sun);box-shadow:7px 7px 0 var(--ink),12px 12px 0 var(--pink);transform:rotate(-1deg)}
+.glitch-title:before,.glitch-title:after{content:attr(data-text);position:absolute;inset:0;padding:inherit;pointer-events:none;opacity:0;overflow:hidden;white-space:normal}
+.glitch-title:before{color:var(--blue);clip-path:inset(9% 0 72% 0);transform:translate(3px,-1px);animation:glitch-scan 11s steps(1,end) infinite}
+.glitch-title:after{color:var(--pink);clip-path:inset(70% 0 12% 0);transform:translate(-3px,1px);animation:glitch-scan 11s steps(1,end) infinite reverse}
+.glitch-title:hover:before,.glitch-title:hover:after{opacity:1}
+.btn,.site-nav a,.signal-control{transition:transform .15s ease,box-shadow .15s ease,background-color .15s ease,color .15s ease}
+.btn:active,.site-nav a:active{transform:translate(1px,1px);box-shadow:1px 1px 0 var(--ink)}
+.instrument{position:relative;transform:rotate(1.6deg);box-shadow:11px 11px 0 var(--pink),16px 16px 0 var(--blue);transition:transform .28s ease,box-shadow .28s ease}
+.instrument:hover,.instrument:focus-within{transform:rotate(0deg) translateY(-4px);box-shadow:12px 12px 0 var(--sun),18px 18px 0 var(--blue)}
+.instrument-head:after{content:"";width:9px;height:9px;background:var(--ink);border-radius:50%;flex:none;box-shadow:14px 0 0 var(--blue);animation:beacon 3s ease-in-out infinite}
+.signal-controls{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin:0 0 26px}
+.signal-control{cursor:pointer;min-width:0;text-align:left;border:1px solid #797569;background:#242320;color:#eae7de;padding:10px 9px;border-radius:4px;font:750 10px/1.4 var(--mono);letter-spacing:.005em}
+.signal-control:hover{background:#49463d;color:#fff;transform:translateY(-2px)}
+.signal-control.is-active,.signal-control[aria-pressed="true"]{background:var(--phos);color:var(--ink);border-color:var(--phos);box-shadow:3px 3px 0 var(--blue)}
+.signal-control:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+.signal-readout{min-height:310px}
+.instrument-id{font-size:12px}
+.instrument-num{transition:color .2s ease;will-change:auto}
+.instrument[data-lens="owner"] .instrument-num{color:var(--sun)}
+.instrument[data-lens="agent"] .instrument-num{color:#8db0ff}
+.instrument[data-lens="outcome"] .instrument-num{color:var(--pink)}
+.instrument[data-lens="owner"] .memory-rail i:nth-child(even){background:var(--blue)}
+.instrument[data-lens="agent"] .memory-rail i:nth-child(odd){background:var(--phos)}
+.instrument[data-lens="outcome"] .memory-rail i{background:var(--pink)}
+.memory-rail i{animation:memory-wave 5.5s ease-in-out infinite;animation-delay:calc(var(--index,0) * 100ms)}
+.memory-rail i:nth-child(1){--index:0}.memory-rail i:nth-child(2){--index:1}.memory-rail i:nth-child(3){--index:2}.memory-rail i:nth-child(4){--index:3}.memory-rail i:nth-child(5){--index:4}.memory-rail i:nth-child(6){--index:5}.memory-rail i:nth-child(7){--index:6}.memory-rail i:nth-child(8){--index:7}
+.instrument-foot{min-height:104px}
+.instrument-no{letter-spacing:.04em}
+.floor,.stat,.panel,.reach>div,.sources-grid a{transition:transform .18s ease,box-shadow .18s ease,background .18s ease}
+.floor:hover,.stat:hover,.reach>div:hover{transform:translateY(-4px);box-shadow:6px 7px 0 var(--ink)}
+.sources-grid a:hover{transform:translateX(5px)}
+.matrix-row:not(.matrix-head):hover{background:#f2f4ff}
+.closing{background:linear-gradient(106deg,var(--sun),#ffe780 65%,#ffb6dc)}
+@keyframes float-geo{from{transform:translateY(0) rotate(-7deg)}to{transform:translateY(16px) rotate(16deg)}}
+@keyframes cross-wiggle{0%,83%,100%{transform:rotate(14deg)}90%{transform:rotate(32deg)}}
+@keyframes orbit-drift{to{transform:rotate(360deg)}}
+@keyframes beacon{0%,100%{opacity:1}50%{opacity:.65}}
+@keyframes memory-wave{0%,78%,100%{filter:brightness(1);transform:translateY(0)}83%{filter:brightness(1.3);transform:translateY(-4px)}89%{filter:brightness(.8);transform:translateY(0)}}
+@keyframes glitch-scan{0%,89%,93%,100%{opacity:0}90%,91%{opacity:.75}92%{opacity:.22}}
+@media(max-width:800px){.geo-cross{left:83%;top:6%;opacity:.5}.orbit{right:-165px;top:-180px}.instrument{transform:none;box-shadow:7px 7px 0 var(--pink),11px 11px 0 var(--blue)}.instrument:hover,.instrument:focus-within{transform:translateY(-2px)}.signal-readout{min-height:300px}}
+@media(max-width:520px){.hero h1>span{box-shadow:4px 4px 0 var(--ink),8px 8px 0 var(--pink)}.signal-readout{min-height:295px}.geo-dots{display:none}.instrument-head{font-size:10px}.signal-controls{margin-bottom:18px}.instrument-inner{padding:24px 22px 20px}}
+@media(prefers-reduced-motion:reduce){.orbit,.geo-triangle,.geo-cross,.hero-top:before,.instrument-head:after,.memory-rail i,.glitch-title:before,.glitch-title:after{animation:none!important}.glitch-title:before,.glitch-title:after{display:none}.instrument,.floor,.stat,.reach>div,.btn,.site-nav a,.signal-control{transition:none!important}}
+
+@media(max-width:1060px){.hero-wrap{grid-template-columns:1fr 345px;gap:28px}.hero-lede{font-size:22px}.section-hd{grid-template-columns:100px 1fr;gap:25px}.section-body{margin-left:125px}.floors{grid-template-columns:1fr 1fr}.matrix-row{grid-template-columns:160px minmax(0,1fr) 135px;gap:11px}.sitebar-inner{gap:12px}}
+@media(max-width:800px){.shell{width:min(100% - 36px,720px)}.sitebar-inner{padding:10px 18px;align-items:flex-start;flex-wrap:wrap}.site-nav{gap:5px}.site-nav a{padding:7px 10px;font-size:10px}.hero-wrap{grid-template-columns:1fr;gap:31px;padding:48px 0 46px}.hero h1{max-width:13ch}.instrument{max-width:440px;transform:none;box-shadow:6px 6px 0 var(--pink)}.intro{grid-template-columns:1fr;gap:10px;padding:34px 0}.section{padding:48px 0}.section-hd{display:block}.section-n{margin:0 0 15px}.section-body{margin-left:0}.stats{grid-template-columns:1fr 1fr}.pairs{grid-template-columns:1fr}.reach{grid-template-columns:1fr}.sources-grid{grid-template-columns:1fr 1fr}.matrix-row{grid-template-columns:130px minmax(0,1fr);gap:13px}.matrix-row .assessment{grid-column:2}.matrix-head{display:none}}
+@media(max-width:520px){html{scroll-padding-top:110px}.shell{width:calc(100% - 30px)}body{font-size:17px}.brand{font-size:19px}.mark{width:25px;height:25px}.site-nav{overflow-x:auto;flex-wrap:nowrap;max-width:100%;padding-bottom:3px}.site-nav a{white-space:nowrap}.hero-top{font-size:10px}.hero-wrap{padding-top:39px}h1{font-size:clamp(47px,12.2vw,64px)}.hero-lede{font-size:21px}.hero-plain{font-size:16px}.stats,.floors,.checks,.receipt-grid,.sources-grid{grid-template-columns:1fr}.receipt-grid>div:nth-child(odd){border-right:0}.stat .val{font-size:43px}.floor .q{font-size:21px}.matrix-row{grid-template-columns:1fr;gap:7px}.matrix-row .assessment{grid-column:1}.matrix-row .cap{font-size:18px}.matrix-row{padding:18px}.closing .shell{display:block}.closing a{display:inline-block;margin-top:22px}.ticker .shell{gap:5px 15px}.section-hd p{font-size:16px}.section-body>p{font-size:16px}footer .shell{display:block}footer a{display:inline-block;margin-top:11px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+
+
+/* PROSUMER / AGENT-FIRST · Shared visual DNA with the DGX Spark Field Guide */
+.hero.agent{background:linear-gradient(110deg,#f5edda 0%,#fff5d9 54%,#e5eaff 100%)}
+.hero.agent .hero-wrap{grid-template-columns:minmax(0,1.16fr) minmax(320px,.84fr);padding:80px 0 90px}
+.hero.agent h1{font-size:clamp(52px,5.9vw,82px);max-width:13ch;letter-spacing:-.055em}
+.hero.agent h1 span{background:var(--phos);box-shadow:6px 6px 0 var(--ink)}
+.hero.agent .hero-lede{max-width:42ch}
+.loopcard{position:relative;min-width:0;transform:rotate(1.3deg);border:3px solid var(--ink);border-radius:12px;box-shadow:9px 9px 0 var(--pink);overflow:hidden;background:var(--paper)}
+.loop-head{padding:13px 15px;background:var(--sun);border-bottom:3px solid var(--ink);display:flex;gap:12px;align-items:center;justify-content:space-between;font:800 11px/1.4 var(--mono)}
+.signal-dot{width:9px;height:9px;border-radius:100%;background:var(--jade);box-shadow:0 0 0 3px rgba(23,108,85,.13);animation:signal 2.6s ease-in-out infinite}
+.loop-body{padding:20px 22px 22px;background:var(--ink);color:var(--bone)}
+.operator-tile{border:1px solid #675f54;background:#29251e;padding:14px 16px;margin:0 0 13px;display:flex;gap:12px;align-items:center;justify-content:space-between}
+.operator-tile strong{font:900 22px/1.1 var(--display)}
+.operator-tile small{display:block;font:11px/1.55 var(--mono);color:#e3ddcf}
+.operator-tile.human{border-left:6px solid var(--sun)}
+.operator-tile.agent-op{border-left:6px solid var(--pink)}
+.operator-tile.device{border-left:6px solid var(--phos)}
+.operator-tile .indicator{width:12px;height:12px;flex:none;background:var(--phos);border:1px solid var(--ink)}
+.operator-tile.agent-op .indicator{background:var(--pink)}
+.operator-lines{height:18px;display:flex;align-items:center;justify-content:center;gap:6px;margin:-5px 0 7px;color:var(--phos);font:750 12px var(--mono)}
+.operator-lines i{height:15px;width:2px;background:var(--phos);display:block;animation:lines 2.3s ease-in-out infinite}
+.operator-lines i:nth-child(2){animation-delay:.25s}.operator-lines i:nth-child(3){animation-delay:.5s}
+.loop-bottom{border-top:1px solid #777063;padding:13px 0 0;margin-top:15px;font:11px/1.7 var(--mono);color:#ded9cf}
+.loop-bottom b{color:var(--phos)}
+.belt{border-block:3px solid var(--ink);background:var(--ink);color:var(--bone);overflow:hidden}
+.belt .shell{padding:16px 0;display:flex;flex-wrap:wrap;align-items:center;gap:15px 27px;font:750 12px/1.5 var(--mono)}
+.belt span:before{content:'+';color:var(--sun);margin-right:10px}
+.manifesto-pull{font-size:clamp(27px,3.25vw,44px);line-height:1.16;font-weight:900;max-width:25ch;letter-spacing:-.035em;margin:0}
+.manifesto-pull mark{background:var(--sun);padding:2px 7px;color:var(--ink)}
+.explainer{font-size:18px;line-height:1.65;max-width:72ch}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.compare article{min-width:0;border:2px solid var(--ink);background:var(--paper);padding:25px;box-shadow:4px 4px 0 var(--ink);border-radius:10px}
+.compare article:last-child{background:#dfe7ff;border-top:10px solid var(--blue)}
+.compare article:first-child{background:#ffebc5;border-top:10px solid var(--sun)}
+.compare h3{font:900 26px/1.14 var(--display);letter-spacing:-.035em;margin:5px 0 16px}
+.compare p{font-size:16px;line-height:1.6;margin:0 0 12px}
+.compare .eyebrow{font-size:11px;color:var(--jade)}
+.contract{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.contract article{min-width:0;background:var(--paper);border:2px solid var(--ink);border-radius:10px;box-shadow:4px 4px 0 var(--ink);padding:20px}
+.contract article:nth-child(1){background:#ffe9ae}.contract article:nth-child(2){background:#ebdfff}.contract article:nth-child(3){background:#d9f4e8}.contract article:nth-child(4){background:#e0e8ff}.contract article:nth-child(5){background:#f9dce8}.contract article:nth-child(6){background:#f9f3db}
+.contract .n{font:900 32px/1 var(--display);margin-bottom:14px;color:var(--jade)}
+.contract h3{font:900 22px/1.1 var(--display);margin:0 0 11px;letter-spacing:-.035em}
+.contract p{font-size:15px;line-height:1.6;margin:0}
+.design-promise{border:3px solid var(--ink);border-radius:12px;box-shadow:6px 6px 0 var(--pink);background:var(--paper);overflow:hidden}
+.design-promise .bar{display:flex;align-items:center;gap:12px;background:var(--ink);color:var(--bone);padding:14px 19px;font:800 12px var(--mono)}
+.design-promise .bar .pulse{width:9px;height:9px;border-radius:50%;background:var(--phos);animation:signal 2s infinite}
+.mode-tabs{display:flex;flex-wrap:wrap;gap:9px;padding:19px;background:var(--soft);border-bottom:2px solid var(--ink)}
+.mode-tabs button{cursor:pointer;min-height:44px;border:2px solid var(--ink);border-radius:7px;padding:10px 15px;box-shadow:2px 2px 0 var(--ink);background:var(--paper);color:var(--ink);font:800 12px var(--mono)}
+.mode-tabs button[aria-pressed=true]{background:var(--sun)}.mode-tabs button:hover{transform:translateY(-2px)}.mode-tabs button:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
+.promise-layout{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.promise-layout article{padding:27px 25px;min-width:0}
+.promise-layout article+article{border-left:2px solid var(--ink);background:#e6eaff}
+.promise-layout .before{background:#fff4dd}
+.promise-layout .mini{font:850 11px var(--mono);text-transform:uppercase;letter-spacing:.065em;margin:0 0 18px}
+.promise-layout h3{font:900 25px/1.12 var(--display);letter-spacing:-.02em;margin:0 0 16px}
+.promise-layout p{font-size:17px;line-height:1.57;margin:0}
+.promise-result{padding:16px 25px;background:var(--phos);border-top:2px solid var(--ink);font:750 14px/1.55 var(--mono)}
+.field-panel{display:grid;grid-template-columns:minmax(0,1fr) 210px;gap:18px;align-items:start}
+.field-panel .report{background:var(--paper);border:2px solid var(--ink);border-radius:8px;padding:25px;box-shadow:4px 4px 0 var(--ink)}
+.field-panel .report p{font-size:17px;line-height:1.65}
+.field-panel .receipt{border:2px solid var(--ink);background:#dfe7ff;padding:22px;box-shadow:4px 4px 0 var(--ink)}
+.field-panel .receipt .eyebrow{font-size:10px}.field-panel .receipt strong{display:block;font:900 25px/1.1 var(--display);margin:13px 0}
+.field-panel .receipt p{font:12px/1.6 var(--mono)}
+.honesty{border-left:7px solid var(--pink);padding:15px 18px;background:#f9e6ee;font-size:16px;line-height:1.6}
+.eval{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.eval article{border:2px solid var(--ink);border-radius:9px;background:var(--paper);padding:22px;box-shadow:3px 3px 0 var(--ink)}
+.eval .eyebrow{color:var(--jade)}.eval h3{font:900 21px/1.2 var(--display);margin:8px 0 10px}.eval p{font-size:15px;line-height:1.6;margin:0}
+.takeaway{border:3px solid var(--ink);padding:30px 33px;border-radius:10px;box-shadow:7px 7px 0 var(--blue);background:var(--sun)}
+.takeaway strong{font:900 clamp(27px,3.3vw,43px)/1.14 var(--display);letter-spacing:-.03em;display:block;max-width:30ch}
+.takeaway p{max-width:60ch;margin:16px 0 0;font-size:18px;line-height:1.55}
+.next-links{display:grid;grid-template-columns:1fr 1fr 1fr;gap:15px;margin:23px 0}
+.next-links a{background:var(--paper);min-width:0;border:2px solid var(--ink);border-radius:9px;padding:21px;text-decoration:none;box-shadow:3px 3px 0 var(--ink)}
+.next-links a:hover{transform:translateY(-3px);background:var(--sun);color:var(--ink)}
+.next-links strong{display:block;font:900 18px/1.2 var(--display);margin:0 0 8px}
+.next-links small{font:12px/1.6 var(--mono)}
+.sitefoot{border-top:3px solid var(--ink);background:var(--soft);padding:32px 0 40px;font:12px/1.7 var(--mono)}
+.sitefoot .shell{display:flex;justify-content:space-between;gap:22px;flex-wrap:wrap}
+.sitefoot p{margin:0;max-width:78ch}
+.sitefoot a{font-weight:800;white-space:nowrap}
+/* Intentional motion: small, informative, never blocks the text. */
+@keyframes signal{50%{opacity:.45;box-shadow:0 0 0 9px rgba(143,255,61,.05)}}
+@keyframes lines{50%{transform:scaleY(.44);opacity:.48}}
+@keyframes chroma{0%,92%,100%{text-shadow:none}93%{text-shadow:-3px 0 var(--pink),3px 0 var(--blue)}94%{text-shadow:2px 0 var(--pink),-2px 0 var(--blue)}96%{text-shadow:none}}
+.hero.agent h1 .glitch{animation:chroma 8s linear infinite}
+@media(max-width:980px){.hero.agent .hero-wrap{grid-template-columns:1fr;gap:32px}.loopcard{width:min(540px,100%);transform:none}.section-body{margin-left:0}.section-hd{grid-template-columns:96px 1fr;gap:16px}.contract{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:720px){body{font-size:17px}.shell{width:calc(100% - 32px)}.sitebar-inner{padding:13px 16px;flex-wrap:wrap;gap:14px}.site-nav{width:100%;flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px}.site-nav a{white-space:nowrap;padding:9px 11px}.hero.agent .hero-wrap{padding:46px 0 50px}.hero.agent h1{font-size:clamp(42px,11vw,65px)}.hero.agent .hero-lede{font-size:21px}.section{padding:45px 0}.section-hd{display:block}.section-n{margin-bottom:15px}.section-body{margin:0}.compare,.contract,.promise-layout,.eval,.next-links{grid-template-columns:1fr}.promise-layout article+article{border-left:0;border-top:2px solid var(--ink)}.field-panel{grid-template-columns:1fr}.operator-tile strong{font-size:19px}.manifesto-pull{font-size:32px}}
+@media(max-width:350px){.hero.agent h1{font-size:40px}.mode-tabs{gap:7px;padding:12px}.mode-tabs button{flex:1 1 auto;padding:9px 12px;font-size:11px}.loop-body{padding:15px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important;transform:none!important}}
+
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="sitebar"><div class="sitebar-inner">
+<a class="brand" href="https://prosumer.one/"><span class="mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>PROSUMER<span aria-hidden="true">.</span></a>
+<nav class="site-nav" aria-label="Site navigation"><a href="https://prosumer.one/">Manifesto</a><a href="https://prosumer.one/devices/">Devices</a><a aria-current="page" href="#contract">Agent-first</a><a href="dgx-spark.html">DGX Spark</a><a href="https://prosumer.watch/">The index</a></nav>
+</div></header>
+<main id="main">
+<section class="hero agent"><div class="shell hero-wrap"><div>
+<p class="hero-top">PROSUMER / DESIGN PRINCIPLE · 26 OCT 2026</p>
+<h1>AGENT-FIRST.<br><span class="glitch">STILL HUMAN-OWNED.</span></h1>
+<p class="hero-lede">The next personal AI computer should be understandable to two operators: its owner, and the AI assistant that owner already uses.</p>
+<p class="hero-plain">Most “AI PCs” answer one question: <b>can this computer run AI?</b> A new question matters just as much: <b>can my AI operate this computer for me — safely, usefully, and without turning me into its full-time administrator?</b></p>
+<div class="actions"><a class="btn" href="#contract">The design contract ↓</a><a class="btn secondary" href="#scenarios">Try three situations ↓</a></div>
+<p class="meta">CONCEPT / NOT A PRODUCT CERTIFICATION · OCTOBER 2026 FIELD OBSERVATIONS</p>
+</div>
+<div class="loopcard" aria-label="Illustration of human owner, delegated AI operator and computer">
+<div class="loop-head"><span>PROSUMER / TWO-OPERATOR ARCHITECTURE</span><i class="signal-dot" aria-hidden="true"></i></div>
+<div class="loop-body">
+<div class="operator-tile human"><div><small>01 / DECIDES &amp; AUTHORISES</small><strong>HUMAN OWNER</strong></div><span class="indicator" aria-hidden="true"></span></div>
+<div class="operator-lines" aria-hidden="true"><i></i><i></i><i></i><span>SCOPED MANDATE ↓</span><i></i><i></i></div>
+<div class="operator-tile agent-op"><div><small>02 / DISCOVERS &amp; OPERATES</small><strong>AI OPERATOR</strong></div><span class="indicator" aria-hidden="true"></span></div>
+<div class="operator-lines" aria-hidden="true"><i></i><i></i><i></i><span>PERMITTED ACTION ↓</span><i></i><i></i></div>
+<div class="operator-tile device"><div><small>03 / EXPOSES STATE &amp; CONTROL</small><strong>PERSONAL AI PC</strong></div><span class="indicator" aria-hidden="true"></span></div>
+<div class="loop-bottom"><b>OWNER REMAINS IN CONTROL.</b> Observe, approve, revoke, recover. Not an autonomous free-for-all.</div>
+</div></div>
+</div></section>
+<div class="belt"><div class="shell"><span>CAN AI RUN ON IT? <b>HARDWARE</b></span><span>CAN AI RUN IT? <b>OPERABILITY</b></span><span>WAS IT WORTH DOING? <b>OUTCOME</b></span></div></div>
+<div class="shell">
+<div class="intro"><div class="label">Why this matters</div><div class="copy"><p>AI made it easier to ask for a tool, a prototype or an answer. But setting up the computer to produce one can still require a second career in drivers, Docker, permissions and recovery procedures.</p><p class="manifesto-pull">I want to <mark>make tools</mark>. I don't want to become a tool-maintenance department.</p><p>That is the difference between an impressive box and a genuinely useful personal AI computer.</p></div></div>
+<section class="section" id="definition"><div class="section-hd"><div class="section-n"><strong>01</strong>Definition</div><div><h2>Agent-friendly is good.<br>Agent-first goes further.</h2><p>Both are useful. They solve different problems.</p></div></div><div class="section-body">
+<div class="compare">
+<article><p class="eyebrow">TODAY'S MOST COMMON APPROACH</p><h3>AGENT-FRIENDLY</h3><p>The manual is easy to parse. The computer has SSH, APIs, scripts and helpful error messages.</p><p><b>An AI assistant can work with the machine</b> if someone has already assembled the right access and tools.</p></article>
+<article><p class="eyebrow">THE NEXT PRODUCT QUESTION</p><h3>AGENT-FIRST</h3><p>The machine is designed from the outset for a second, authorised operator.</p><p>It can explain its state, expose limited actions, safely request owner decisions and provide a recovery route. <b>The owner remains the principal.</b></p></article>
+</div><p class="keyline">An agent-first computer is not a computer that AI owns. It is a computer deliberately designed to be operated by AI on its owner's behalf.</p></div></section>
+<section class="section" id="contract"><div class="section-hd"><div class="section-n"><strong>02</strong>Design</div><div><h2>The two-operator contract.</h2><p>Six promises a manufacturer could make — and a buyer could actually test.</p></div></div><div class="section-body">
+<div class="contract">
+<article><div class="n">01</div><h3>DISCOVER</h3><p>Tell the agent what hardware, software and capabilities exist, without requiring a forensic scavenger hunt.</p></article>
+<article><div class="n">02</div><h3>ONBOARD</h3><p>Get from first boot to a task the owner recognises as useful, with clear human approval where needed.</p></article>
+<article><div class="n">03</div><h3>OPERATE</h3><p>Offer understandable, bounded ways to install, run and inspect applications — not unrestricted root as the default.</p></article>
+<article><div class="n">04</div><h3>RECOVER</h3><p>Expose what broke, what was last healthy, what can be retried and when a human must intervene.</p></article>
+<article><div class="n">05</div><h3>DELEGATE</h3><p>Grant a person or agent one capability, for one purpose, under scope and expiry. Make revocation real.</p></article>
+<article><div class="n">06</div><h3>ACCOUNT</h3><p>Show what the agent did, what changed, whether the owner's goal was met and how much intervention was required.</p></article>
+</div><p class="source-note">These are proposed design criteria, not evidence that any current device satisfies all six.</p></div></section>
+<section class="section" id="scenarios"><div class="section-hd"><div class="section-n"><strong>03</strong>Interactive</div><div><h2>What would this change on a Tuesday?</h2><p>Choose a familiar situation. The right-hand side is the product behaviour we'd want — not a feature claim about a shipping machine.</p></div></div><div class="section-body">
+<div class="design-promise" id="promise"><div class="bar"><span class="pulse" aria-hidden="true"></span><span>ILLUSTRATIVE PRODUCT SCENARIO / NOT A LIVE DEVICE DEMO</span></div>
+<div class="mode-tabs" role="group" aria-label="Choose example scenario"><button type="button" class="mode" data-mode="setup" aria-pressed="true">01 / SET UP</button><button type="button" class="mode" data-mode="failure" aria-pressed="false">02 / RECOVER</button><button type="button" class="mode" data-mode="share" aria-pressed="false">03 / SHARE</button></div>
+<div class="promise-layout"><article class="before"><p class="mini">WITHOUT AGENT-FIRST DESIGN</p><h3 id="before-title">Fourteen tabs. Three drivers. One evening gone.</h3><p id="before-copy">You wanted to analyse a folder of documents locally. You're instead figuring out drivers, downloads, ports and which command ran last.</p></article><article><p class="mini">WHAT AN AGENT-FIRST PC SHOULD ENABLE</p><h3 id="after-title">From unboxing to a useful document answer.</h3><p id="after-copy">Your approved assistant reads device capabilities, installs a supported workflow, asks for any sensitive decision, then shows the result and what it changed.</p></article></div>
+<div class="promise-result"><b>PASS CONDITION / </b><span id="scenario-test">The user gets a correct, usable result — without hidden intervention, surprise access or unexplained system changes.</span></div>
+</div></div></section>
+<section class="section" id="authority"><div class="section-hd"><div class="section-n"><strong>04</strong>Ownership</div><div><h2>Power without blanket permission.</h2><p>An assistant should be able to help. It should not need the keys to everything.</p></div></div><div class="section-body">
+<p class="explainer">An admin login or a functioning API tells us what a process <em>can</em> access. It does not tell us what that agent <em>was authorised</em> to do for this owner, for this task, at this moment.</p>
+<div class="eval"><article><p class="eyebrow">EXAMPLE / READ</p><h3>Inspect GPU state</h3><p>Allow read-only diagnostics for this session. Preserve evidence of what was inspected.</p></article><article><p class="eyebrow">EXAMPLE / CHANGE</p><h3>Install a model</h3><p>Ask permission to alter the machine, show the scope of changes and provide a rollback plan.</p></article><article><p class="eyebrow">EXAMPLE / SHARE</p><h3>Give access to an endpoint</h3><p>Limit a collaborator to one application; define expiry and access boundaries.</p></article><article><p class="eyebrow">EXAMPLE / REVOKE</p><h3>Stop the delegation</h3><p>Prove that an expired or revoked permission no longer works — without destroying the owner's own access.</p></article></div>
+<p class="honesty"><b>Human-owned is non-negotiable.</b> Being agent-first does not mean agents decide the purpose of the computer, override the owner or claim that a successful SSH session proves safe delegation.</p></div></section>
+<section class="section" id="spark"><div class="section-hd"><div class="section-n"><strong>05</strong>Evidence</div><div><h2>Spark gave us a partial glimpse.</h2><p>Useful assisted operation, not a completed agent-first certification.</p></div></div><div class="section-body">
+<div class="field-panel"><article class="report"><p>During an October 2026 NVIDIA DGX Spark field study, the owner handled physical setup, firmware, identity activation and approvals. An AI operator helped inspect actual system state, diagnose a GPU/driver failure chain, carry out recovery steps and verify working application outputs.</p><p>That division of labour matters. So do its limits: there was no controlled reduction-in-owner-time measurement, no unattended first boot, no cross-agent comparison, and no third-party delegated-access/revocation result.</p><p><b>A machine + documentation + an AI operator + human help</b> is the system that was observed. Do not pretend it is a score for the machine alone.</p><p class="linkline"><a href="dgx-spark.html">Read the Prosumer Spark reference case ↗</a><a href="https://www.solodkiy.cv/dgx-spark.html">Owner's first-person report ↗</a></p></article>
+<aside class="receipt"><span class="eyebrow">FIELD SIGNAL / OCT 2026</span><strong>PARTIAL.</strong><p>Assisted diagnosis: observed.<br>Useful workloads: observed.<br>Zero-touch operation: untested.<br>Revocable sharing: untested.</p><span class="tag mixed">NOT A RATING</span></aside>
+</div></div></section>
+<section class="section" id="index"><div class="section-hd"><div class="section-n"><strong>06</strong>Method</div><div><h2>How Prosumer should evaluate it.</h2><p>The next benchmark is not a single synthetic command. It is a real task with an owner, a boundary and a verified result.</p></div></div><div class="section-body">
+<div class="eval"><article><p class="eyebrow">TASK</p><h3>First useful result</h3><p>Can a new owner complete a meaningful local AI task, and how long does it take from a defined starting point?</p></article><article><p class="eyebrow">INTERVENTION</p><h3>How often did a human step in?</h3><p>Record physical actions, approvals, debugging, surprises and steps the assistant could not perform.</p></article><article><p class="eyebrow">PORTABILITY</p><h3>Can the result travel?</h3><p>Repeat the task across appropriate agents and devices. Disclose prior setup, network tools and hidden dependencies.</p></article><article><p class="eyebrow">BOUNDARIES</p><h3>Was the scope respected?</h3><p>Confirm the allowed action succeeded, forbidden actions failed, and permissions could be revoked.</p></article></div>
+<p class="keyline">A green PASS badge is not the product. A useful result — with transparent effort and retained human control — is the product.</p><p class="linkline"><a href="https://prosumer.watch/">Prosumer Watch / device index ↗</a><a href="https://prosumer.one/">Back to the manifesto ↗</a></p></div></section>
+<section class="section" id="future"><div class="section-hd"><div class="section-n"><strong>07</strong>Manifesto</div><div><h2>Design for what people want to make.</h2><p>Not just the resources computers can theoretically consume.</p></div></div><div class="section-body">
+<div class="takeaway"><strong>THE NEXT GREAT AI PC SHOULD MAKE THE OWNER MORE CAPABLE, NOT MORE RESPONSIBLE FOR KEEPING THE INFRASTRUCTURE ALIVE.</strong><p>Better components matter. But the larger product opportunity is a machine that explains itself, accepts bounded help, recovers intelligibly and gives its owner more room to create.</p></div>
+<div class="next-links"><a href="https://prosumer.one/"><strong>The Prosumer Manifesto</strong><small>Who is this computer actually for?</small></a><a href="dgx-spark.html"><strong>DGX Spark / FG-03</strong><small>The first real field case behind this question.</small></a><a href="https://www.solodkiy.cv/dgx-spark.html"><strong>Owner's field notes</strong><small>What happened, what worked and what failed.</small></a></div>
+</div></section>
+</div></main>
+<footer class="sitefoot"><div class="shell"><p>PROSUMER / Independent design essay grounded in field observations from 22–26 October 2026. Agent-first is a proposed product-design principle; it is not a certification, vendor designation or claim that scoped delegation was demonstrated. NVIDIA supplied the Spark used in the linked field study as a prize/gift.</p><a href="#main">BACK TO TOP ↑</a></div></footer>
+<script>
+(() => {
+const scenarios={
+setup:{a:'Fourteen tabs. Three drivers. One evening gone.',b:'You wanted to analyse a folder of documents locally. You are instead figuring out drivers, downloads, ports and which command ran last.',c:'From unboxing to a useful document answer.',d:'Your approved assistant reads device capabilities, installs a supported workflow, asks for any sensitive decision, then shows the result and what it changed.',e:'The user gets a correct, usable result — without hidden intervention, surprise access or unexplained system changes.'},
+failure:{a:'The GPU disappeared. The owner became support.',b:'A model stops responding after an update. You see an error code, but not which dependency broke or what is safe to retry.',c:'Show the failure chain. Recover deliberately.',d:'The assistant can inspect supported logs, identify a failed dependency and propose reversible fixes. Firmware and high-impact choices remain with the owner.',e:'The application produces a verified result again; recovery steps, owner approvals and remaining risks are visible.'},
+share:{a:'One useful app. One oversized account.',b:'You want to let a colleague use one AI workflow remotely. The easy option seems to be sharing a broad login or opening more access than intended.',c:'Share one capability, then take it back.',d:'The device offers an authorised endpoint with narrow scope, expiry and observable use; the owner can revoke it without losing their own access.',e:'The allowed task works; outside-scope actions fail; revocation prevents further access.'}
+};
+const ids={'before-title':'a','before-copy':'b','after-title':'c','after-copy':'d','scenario-test':'e'};
+const buttons=[...document.querySelectorAll('.mode')];
+function render(key){const s=scenarios[key];if(!s)return;for(const [id,field] of Object.entries(ids)){document.getElementById(id).textContent=s[field]}buttons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mode===key)))}
+buttons.forEach((b,i)=>{b.addEventListener('click',()=>render(b.dataset.mode));b.addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight'].includes(e.key))return;e.preventDefault();let j=(i+(e.key==='ArrowRight'?1:-1)+buttons.length)%buttons.length;buttons[j].focus();render(buttons[j].dataset.mode)})});
+})();
+</script>
+</body></html>
